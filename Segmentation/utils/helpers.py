@@ -21,7 +21,7 @@ def pavpu(accurate_mask, uncertainty_map, uncertainty_threshold, acc_threshold=0
     p_ac = 0
     p_ui = 0
     pavpu = 0
-    
+    n=v_patches*h_patches
     for i in range(v_patches):
         for j in range(h_patches):
             uncertainty_patch = uncertainty_map[i*4 : (i + 1)*4][j*4 : (j + 1)*4]
@@ -42,7 +42,7 @@ def pavpu(accurate_mask, uncertainty_map, uncertainty_threshold, acc_threshold=0
     if n_i>0:
         p_ui += float(n_iu) / float(n_i)
     if n_c>0 or n_i>0:
-        pavpu += float(n_ac + n_iu) / float(n_c + n_i)
+        pavpu += float(n_ac + n_iu) / float(n)
     
     return p_ac, p_ui, pavpu
 
@@ -66,6 +66,7 @@ def pavpu_labels(prediction_mask, label_mask, ignore_label,uncertainty_map, unce
     pavpu = 0.
     
     skipped=0
+    n=0
     
     for i in range(v_patches):
         for j in range(h_patches):
@@ -82,6 +83,7 @@ def pavpu_labels(prediction_mask, label_mask, ignore_label,uncertainty_map, unce
 
             uncertainty[i][j] = np.sum(uncertainty_patch*not_ignore_patch)/np.sum(not_ignore_patch) > uncertainty_threshold
             accurate[i][j] = np.sum(accurate_patch*not_ignore_patch)/np.sum(not_ignore_patch) > acc_threshold
+            n+=1
           else:
               skipped += 1
               continue
@@ -96,7 +98,7 @@ def pavpu_labels(prediction_mask, label_mask, ignore_label,uncertainty_map, unce
     if n_i>0:
         p_ui += float(n_iu) / float(n_i)
     if n_c>0 or n_i>0:
-        pavpu += float(n_ac + n_iu) / float(n_c + n_i)
+        pavpu += float(n_ac + n_iu) / float(n)
 
     return p_ac, p_ui, pavpu
 
