@@ -157,4 +157,3 @@ def test_model(tmpFeatures):
 
 test_model(tmpFeatures)
 
-# 0.9054999995231628

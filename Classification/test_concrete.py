@@ -149,34 +149,3 @@ def test_model(tmpFeatures):
 
 test_model(tmpFeatures)
 
-# Testing Accuracy: 0.9255573248407644
-
-# [0] ground truth: automobile, predicted result: automobile | True
-#         - [{'airplane': 0.085336745}, {'automobile': 0.23196931}, {'bird': 0.085336745}, {'cat': 0.085336745}, {'deer': 0.085336745}, {'dog': 0.085336745}, {'frog': 0.085336745}, {'horse': 0.085336745}, {'ship': 0.085336745}, {'truck': 0.085336745}]
-
-# [1] ground truth: frog, predicted result: frog | True
-#         - [{'airplane': 0.085336745}, {'automobile': 0.085336745}, {'bird': 0.085336745}, {'cat': 0.085336745}, {'deer': 0.085336745}, {'dog': 0.085336745}, {'frog': 0.23196931}, {'horse': 0.085336745}, {'ship': 0.085336745}, {'truck': 0.085336745}]
-
-# [2] ground truth: ship, predicted result: airplane | False
-#         - [{'airplane': 0.23169348}, {'automobile': 0.085354164}, {'bird': 0.085354164}, {'cat': 0.085354164}, {'deer': 0.085354164}, {'dog': 0.085354164}, {'frog': 0.085354164}, {'horse': 0.085354164}, {'ship': 0.08547324}, {'truck': 0.085354164}]
-
-# [3] ground truth: cat, predicted result: dog | False
-#         - [{'airplane': 0.08537136}, {'automobile': 0.08537136}, {'bird': 0.08560565}, {'cat': 0.085374035}, {'deer': 0.08537136}, {'dog': 0.23142068}, {'frog': 0.08537147}, {'horse': 0.08537136}, {'ship': 0.08537136}, {'truck': 0.08537136}]
-
-# [4] ground truth: dog, predicted result: dog | True
-#         - [{'airplane': 0.085336745}, {'automobile': 0.085336745}, {'bird': 0.085336745}, {'cat': 0.085336745}, {'deer': 0.085336745}, {'dog': 0.23196931}, {'frog': 0.085336745}, {'horse': 0.085336745}, {'ship': 0.085336745}, {'truck': 0.085336745}]
-
-# [5] ground truth: horse, predicted result: horse | True
-#         - [{'airplane': 0.085336745}, {'automobile': 0.085336745}, {'bird': 0.085336745}, {'cat': 0.085336745}, {'deer': 0.085336745}, {'dog': 0.085336745}, {'frog': 0.085336745}, {'horse': 0.23196931}, {'ship': 0.085336745}, {'truck': 0.085336745}]
-
-# [6] ground truth: frog, predicted result: frog | True
-#         - [{'airplane': 0.085336745}, {'automobile': 0.085336745}, {'bird': 0.085336745}, {'cat': 0.085336745}, {'deer': 0.085336745}, {'dog': 0.085336745}, {'frog': 0.23196931}, {'horse': 0.085336745}, {'ship': 0.085336745}, {'truck': 0.085336745}]
-
-# [7] ground truth: deer, predicted result: deer | True
-#         - [{'airplane': 0.08533732}, {'automobile': 0.08533732}, {'bird': 0.08533735}, {'cat': 0.08533732}, {'deer': 0.23196013}, {'dog': 0.08533732}, {'frog': 0.08534125}, {'horse': 0.08533732}, {'ship': 0.08533732}, {'truck': 0.08533732}]
-
-# [8] ground truth: horse, predicted result: horse | True
-#         - [{'airplane': 0.085336745}, {'automobile': 0.085336745}, {'bird': 0.085336745}, {'cat': 0.085336745}, {'deer': 0.085336745}, {'dog': 0.085336745}, {'frog': 0.085336745}, {'horse': 0.23196931}, {'ship': 0.085336745}, {'truck': 0.085336745}]
-
-# [9] ground truth: bird, predicted result: bird | True
-#         - [{'airplane': 0.085336745}, {'automobile': 0.085336745}, {'bird': 0.23196931}, {'cat': 0.085336745}, {'deer': 0.085336745}, {'dog': 0.085336745}, {'frog': 0.085336745}, {'horse': 0.085336745}, {'ship': 0.085336745}, {'truck': 0.085336745}]
